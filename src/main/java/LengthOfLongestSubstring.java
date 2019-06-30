@@ -1,4 +1,5 @@
 public class LengthOfLongestSubstring {
+    // TODO 把hash冲突的信息升级成上次出现的位置，当前长度=当前位置-上次的位置，然后更新最大长度
     public int lengthOfLongestSubstring(String s) {
         char[] array = s.toCharArray();
         int longest = 0;
