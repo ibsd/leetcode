@@ -14,10 +14,12 @@ public class FindMedianSortedArrays {
         int[] result = new int[top];
         int index1 = 0;
         int index2 = 0;
+        int length1 = nums1.length;
+        int length2 = nums2.length;
         int indexResult = 0;
 
         // define loop cond
-        while (index1 < nums1.length && index2 < nums2.length) {
+        while (index1 < length1 && index2 < length2) {
             if (indexResult >= top) {
                 break;
             }
@@ -27,13 +29,13 @@ public class FindMedianSortedArrays {
                 result[indexResult++] = nums2[index2++];
             }
         }
-        while (index1 < nums1.length) {
+        while (index1 < length1) {
             if (indexResult >= top) {
                 break;
             }
             result[indexResult++] = nums1[index1++];
         }
-        while (index2 < nums2.length) {
+        while (index2 < length2) {
             if (indexResult >= top) {
                 break;
             }
